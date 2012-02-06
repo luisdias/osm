@@ -86,33 +86,49 @@
 		<li><?php echo $this->Html->link(__('New Professional'), array('action' => 'add')); ?> </li>
 	</ul>
 </div>
-<?php echo $this->element('related_services',array('currentModel' => $professional)); ?>
 <div class="related">
-	<h3><?php echo __('Related Skills');?></h3>
-	<?php if (!empty($professional['Skill'])):?>
+	<h3><?php echo __('Related Services');?></h3>
+	<?php if (!empty($professional['ProfessionalsService'])):?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
-		<th><?php echo __('Skill Desc'); ?></th>
-		<th class="actions"><?php echo __('Actions');?></th>
+		<th><?php echo __('Service'); ?></th>
+                <th><?php echo __('Approval date'); ?></th>
+                <th><?php echo __('Total time'); ?></th>
+                <th><?php echo __('Total value'); ?></th>
+                <th><?php echo __('Payment date'); ?></th>                
 	</tr>
 	<?php
 		$i = 0;
-		foreach ($professional['Skill'] as $skill): ?>
+		foreach ($professional['ProfessionalsService'] as $professionalsService): ?>
 		<tr>
-			<td><?php echo $skill['skill_desc'];?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'skills', 'action' => 'view', $skill['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'skills', 'action' => 'edit', $skill['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'skills', 'action' => 'delete', $skill['id']), null, __('Are you sure you want to delete # %s?', $skill['id'])); ?>
-			</td>
+                    <td><?php echo $professionalsService['service_id'];?></td>
+                    <td><?php echo $professionalsService['Service']['approval_date'];?></td>
+                    <td><?php echo $professionalsService['total_time'];?></td>
+                    <td><?php echo $professionalsService['total_value'];?></td>
+                    <td><?php echo $professionalsService['payment_date'];?></td>
 		</tr>
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Skill'), array('controller' => 'skills', 'action' => 'add'));?> </li>
-		</ul>
-	</div>
+</div>
+<div class="related">
+	<h3><?php echo __('Related Skills');?></h3>
+	<?php if (!empty($professional['SkillsProfessional'])):?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+            <th><?php echo __('Skill'); ?></th>
+            <th><?php echo __('Rating'); ?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($professional['SkillsProfessional'] as $skillsProfessional): ?>
+		<tr>
+                    <td><?php echo $skillsProfessional['Skill']['skill_desc'];?></td>
+                    <td><?php echo $this->element('rating',array('rating'=>$skillsProfessional['rating']));?></td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+
 </div>

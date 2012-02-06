@@ -23,8 +23,8 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('username');
-		//echo $this->Form->input('password');
-		echo $this->Form->input('role');
+		$options = array('admin'=>'admin','user'=>'user','guest'=>'guest');
+		echo $this->Form->input('role',array('type'=>'select','options'=>$options));
 	?>
 	</fieldset>
 <?php echo $this->Form->submit(__('Submit'));?>

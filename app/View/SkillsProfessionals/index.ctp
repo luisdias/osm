@@ -22,3 +22,4 @@ echo $this->Form->input('fkfield',array('type'=>'hidden','value'=>$fkfield));
 echo $this->Form->input('fkid',array('type'=>'hidden','value'=>$fkid));
 ?>
 <div id="skillsProfessionals" class="index droppable"></div>
+<div class="hmtError"><?php echo __('Skill already associated with this professional');?></div>

@@ -21,9 +21,9 @@
 	<?php if (!empty($currentModel['Service'])):?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
-		<th><?php echo __('Service State Id'); ?></th>
-		<th><?php echo __('Client Id'); ?></th>
-		<th><?php echo __('Service Type Id'); ?></th>
+		<th><?php echo __('Service State'); ?></th>
+		<th><?php echo __('Client'); ?></th>
+		<th><?php echo __('Service Type'); ?></th>
 		<th><?php echo __('Approval Date'); ?></th>
 		<th><?php echo __('Expiration Date'); ?></th>
 		<th><?php echo __('Payment Date'); ?></th>
@@ -38,9 +38,9 @@
 		$i = 0;
 		foreach ($currentModel['Service'] as $service): ?>
 		<tr>
-			<td><?php echo $service['service_state_id'];?></td>
-			<td><?php echo $service['client_id'];?></td>
-			<td><?php echo $service['service_type_id'];?></td>
+			<td><?php echo $service['ServiceState']['service_state_desc'];?></td>
+			<td><?php echo $service['Client']['client_name'];?></td>
+			<td><?php echo $service['ServiceType']['service_type_desc'];?></td>
 			<td><?php echo $service['approval_date'];?></td>
 			<td><?php echo $service['expiration_date'];?></td>
 			<td><?php echo $service['payment_date'];?></td>

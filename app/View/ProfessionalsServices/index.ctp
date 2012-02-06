@@ -22,3 +22,4 @@ echo $this->Form->input('fkfield',array('type'=>'hidden','value'=>$fkfield));
 echo $this->Form->input('fkid',array('type'=>'hidden','value'=>$fkid));
 ?>
 <div id="professionalsServices" class="index droppable"></div>
+<div class="hmtError"><?php echo __('Professional already associated with this service');?></div>

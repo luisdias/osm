@@ -17,7 +17,7 @@
  */
 ?>
 <ul>
-    <li><h3><a href="#" class="user"><?php echo __('Professionals'); ?></a></h3>
+    <li><h3><?php echo __('Professionals - drag and drop'); ?></h3>
         <ul>
         <?php
         foreach ($professionals as $professional):

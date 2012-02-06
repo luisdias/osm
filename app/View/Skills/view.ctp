@@ -58,7 +58,7 @@
 		foreach ($skill['SkillsProfessional'] as $professional): ?>
 		<tr>
 			<td><?php echo $professionals[$professional['professional_id']];?></td>
-			<td><?php echo $professional['rating'];?></td>
+			<td><?php echo $this->element('rating',array('rating'=>$professional['rating']));?></td>
 		</tr>
 	<?php endforeach; ?>
 	</table>

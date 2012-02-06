@@ -24,9 +24,6 @@
 		<th><?php echo __('Client Name'); ?></th>
 		<th><?php echo __('Corporate Name'); ?></th>
 		<th><?php echo __('Phone'); ?></th>
-		<th><?php echo __('Federal Tax Number'); ?></th>
-		<th><?php echo __('Email'); ?></th>
-		<th><?php echo __('Website'); ?></th>
 		<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
 	<?php
@@ -36,9 +33,6 @@
 			<td><?php echo $client['client_name'];?></td>
 			<td><?php echo $client['corporate_name'];?></td>
 			<td><?php echo $client['phone'];?></td>
-			<td><?php echo $client['federal_tax_number'];?></td>
-			<td><?php echo $client['email'];?></td>
-			<td><?php echo $client['website'];?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'clients', 'action' => 'view', $client['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'clients', 'action' => 'edit', $client['id'])); ?>
