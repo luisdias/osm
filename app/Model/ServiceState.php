@@ -56,7 +56,34 @@ class ServiceState extends AppModel {
 			'limit' => '',
 			'offset' => '',
 			'exclusive' => '',
-			'finderQuery' => '',
+			'finderQuery' => 
+                        'SELECT `Service`.`id`, 
+                            `Service`.`service_state_id`, 
+                            `ServiceState`.`service_state_desc`,
+                            `Service`.`client_id`,
+                            `Client`.`client_name`,
+                            `Service`.`service_type_id`, 
+                            `ServiceType`.`service_type_desc`,
+                            `Service`.`approval_date`, 
+                            `Service`.`expiration_date`, 
+                            `Service`.`payment_date`, 
+                            `Service`.`service_description`, 
+                            `Service`.`begin_date`, 
+                            `Service`.`end_date`, 
+                            `Service`.`estimated_value`, 
+                            `Service`.`real_value`, 
+                            `Service`.`discount_value`, 
+                            `Service`.`paid_value`, 
+                            `Service`.`created`, 
+                            `Service`.`modified` 
+                            FROM `services` AS `Service` 
+                            LEFT JOIN `service_states` AS `ServiceState` ON 
+                                (`Service`.`service_state_id` = `ServiceState`.`id`) 
+                            LEFT JOIN `clients` AS `Client` ON 
+                                (`Service`.`client_id` = `Client`.`id`) 
+                            LEFT JOIN `service_types` AS `ServiceType` ON 
+                            (`Service`.`service_type_id` = `ServiceType`.`id`) 
+                            WHERE `Service`.`service_state_id` = {$__cakeID__$}',
 			'counterQuery' => ''
 		)
 	);

@@ -68,7 +68,20 @@ public function __construct($id = false, $table = null, $ds = null) {
                     'limit' => '50',
                     'offset' => '',
                     'exclusive' => '',
-                    'finderQuery' => 'SELECT `ProfessionalsService`.`id`, `ProfessionalsService`.`professional_id`, `ProfessionalsService`.`service_id`, `ProfessionalsService`.`total_time`, `ProfessionalsService`.`total_value`, `ProfessionalsService`.`payment_date`, `ProfessionalsService`.`created`, `ProfessionalsService`.`modified`, `Service`.`approval_date` FROM `professionals_services` AS `ProfessionalsService` LEFT JOIN `services` AS `Service`  ON (`ProfessionalsService`.`service_id` = `Service`.`id`) WHERE `ProfessionalsService`.`professional_id` = {$__cakeID__$} ORDER BY `Service`.`approval_date` DESC LIMIT 50',
+                    'finderQuery' => 'SELECT `ProfessionalsService`.`id`, 
+                        `ProfessionalsService`.`professional_id`, 
+                        `ProfessionalsService`.`service_id`, 
+                        `ProfessionalsService`.`total_time`, 
+                        `ProfessionalsService`.`total_value`, 
+                        `ProfessionalsService`.`payment_date`, 
+                        `ProfessionalsService`.`created`, 
+                        `ProfessionalsService`.`modified`, 
+                        `Service`.`approval_date` 
+                        FROM `professionals_services` AS `ProfessionalsService` 
+                        LEFT JOIN `services` AS `Service` ON 
+                        (`ProfessionalsService`.`service_id` = `Service`.`id`) 
+                        WHERE `ProfessionalsService`.`professional_id` = {$__cakeID__$} 
+                        ORDER BY `Service`.`approval_date` DESC LIMIT 50',
                     'counterQuery' => ''
             ),
             'SkillsProfessional' => array(
@@ -81,7 +94,19 @@ public function __construct($id = false, $table = null, $ds = null) {
                     'limit' => '',
                     'offset' => '',
                     'exclusive' => '',
-                    'finderQuery' => '',
+                    'finderQuery' => 
+                    'SELECT `SkillsProfessional`.`id`, 
+                        `SkillsProfessional`.`skill_id`, 
+                        `Skill`.`skill_desc`, 
+                        `SkillsProfessional`.`professional_id`, 
+                        `SkillsProfessional`.`rating`, 
+                        `SkillsProfessional`.`created`, 
+                        `SkillsProfessional`.`modified` 
+                        FROM `skills_professionals` AS `SkillsProfessional` 
+                        LEFT JOIN `skills` AS `Skill` ON 
+                        ( `SkillsProfessional`.`skill_id` = `Skill`.`id` ) 
+                        WHERE `SkillsProfessional`.`professional_id` = {$__cakeID__$}
+                        ORDER BY `SkillsProfessional`.`rating` DESC',
                     'counterQuery' => ''
             )        
     );

@@ -55,7 +55,7 @@ class ClientCategory extends AppModel {
 			'limit' => '',
 			'offset' => '',
 			'exclusive' => '',
-			'finderQuery' => '',
+			'finderQuery' =>'',
 			'counterQuery' => ''
 		)
 	);
