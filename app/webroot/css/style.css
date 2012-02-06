@@ -587,3 +587,7 @@ table tbody tr td.actions {
 .floatRight {
     float: right;
 }
+
+.hmtError {
+    display:none;
+}
