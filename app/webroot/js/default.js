@@ -59,7 +59,10 @@ $(function() {
         icons: {primary: "ui-icon-wrench"},
         text: false
     });
-    
+    $("td.actions a:contains('Password')").button( {
+        icons: {primary: "ui-icon-key"},
+        text: false
+    });    
      
     // buttons for form.ctp
     $(".cancelButton").button( {

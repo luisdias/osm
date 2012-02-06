@@ -59,7 +59,14 @@ function makeDroppable(firstLevel) {
                     updateGrid(firstLevel);
                 },
                 error: function(id) {         
-                    alert('Database insert error');
+                    $(".hmtError" ).dialog({
+                        modal: true,
+                        buttons: {
+                            Ok: function() {
+                                $( this ).dialog( "close" );
+                            }
+                        }
+                    });
                 }
                 });            
             } 

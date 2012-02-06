@@ -57,8 +57,15 @@ function makeDroppable(firstLevel) {
                     skillsProfessionals = id;
                     updateGrid(firstLevel);                    
                 },
-                error: function(id) {         
-                    alert('Database insert error');
+                error: function(id) {
+                    $(".hmtError" ).dialog({
+                        modal: true,
+                        buttons: {
+                            Ok: function() {
+                                $( this ).dialog( "close" );
+                            }
+                        }
+                    });
                 }
                 });            
             } 
