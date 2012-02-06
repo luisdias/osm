@@ -18,14 +18,12 @@
 App::uses('Controller', 'Controller');
 
 class AppController extends Controller {
-//public $name = null;
 public $fk = null;
 public $singularName = null;
 public $translatedSingularName = null; // translated singular name for view
 public $associatedModel = null;
 
-//public $components = array('Session','Auth');    
-public $components = array('Session','Prg');
+public $components = array('Session','Auth','Prg');
 
 public $helpers = array('Html','Form','Session','Js','ExPaginator','Number');
 
@@ -35,14 +33,14 @@ public function __construct( $request = NULL, $response = NULL ) {
 }
 
 public function beforeFilter() {    
-//    $this->Auth->authenticate = array('Form'=>array('userModel'=>'User'));    
-//    $this->Auth->userModel = 'User';
-//    $this->Auth->loginAction=array('controller'=>'users','action'=>'login');
-//    $this->Auth->loginRedirect=array('controller'=>'services','action'=>'index');
-//    $this->Auth->logoutRedirect=array('controller'=>'users','action'=>'login');
-//    $this->Auth->loginError=__('Invalid login or password',true);     
-//    $this->Auth->authError=__('Without access permission',true); 
-//    $this->Auth->authorize = array('Controller');
+    $this->Auth->authenticate = array('Form'=>array('userModel'=>'User'));    
+    $this->Auth->userModel = 'User';
+    $this->Auth->loginAction=array('controller'=>'users','action'=>'login');
+    $this->Auth->loginRedirect=array('controller'=>'services','action'=>'index');
+    $this->Auth->logoutRedirect=array('controller'=>'users','action'=>'login');
+    $this->Auth->loginError=__('Invalid login or password',true);     
+    $this->Auth->authError=__('Without access permission',true); 
+    $this->Auth->authorize = array('Controller');
 }
 
 public function index() {
