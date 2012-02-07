@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `addresses` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 INSERT INTO `addresses` (`id`, `street`, `number`, `city`, `district`, `state`, `zip_code`, `country`, `entity_id`, `table_name`, `created`, `modified`) VALUES
 (1, 'Lie to me street', '100', 'Neverland', 'Bronx', 'NY', '111111111', 'USA', 1, 'clients', '2012-01-23 16:42:17', '2012-01-23 18:36:41'),
@@ -28,11 +28,13 @@ INSERT INTO `addresses` (`id`, `street`, `number`, `city`, `district`, `state`, 
 (3, 'Main street of nowhere', '400', 'New York', 'Queens', 'NY', '555555555', 'USA', 5, 'clients', '2012-01-23 18:27:40', '2012-01-23 18:27:40'),
 (4, 'The null street', '600', 'New York', 'Bronx', 'NY', '444444444', 'USA', 6, 'clients', '2012-01-23 18:32:55', '2012-01-23 18:32:55'),
 (5, 'The end of the world', '500', 'New York', 'Manhattan', 'NY', '888888888', 'USA', 7, 'clients', '2012-01-23 18:35:08', '2012-01-23 18:35:08'),
-(6, 'Muppet street2', '100', 'Toronto', 'Center', 'TO', '888888888', 'Canada', 8, 'clients', '2012-01-23 19:55:30', '2012-01-24 16:40:42'),
+(6, 'Muppet street2', '100', 'Toronto', 'Center', 'TO', '888888888', 'Canada', 8, 'clients', '2012-01-23 19:55:30', '2012-02-02 19:54:55'),
 (7, 'Nowhere to run street', '100', 'New York', 'Center', 'NY', '222222222', 'USA', 1, 'professionals', '2012-01-24 16:47:23', '2012-01-30 15:02:46'),
 (8, 'Mother Earth street', '200', 'New York', 'Center', 'NY', '333333333', 'USA', 2, 'professionals', '2012-01-24 16:52:38', '2012-01-24 16:52:38'),
 (9, '', '', '', '', '', '', '', 10, 'clients', '2012-01-24 17:06:29', '2012-01-24 17:06:29'),
-(10, 'The street of sorrow', '100', 'Boston', '', '', '', 'USA', 1, 'services', '2012-01-25 13:35:44', '2012-01-25 13:35:44');
+(10, 'The street of sorrow', '100', 'Boston', '', '', '', 'USA', 1, 'services', '2012-01-25 13:35:44', '2012-01-25 13:35:44'),
+(11, '', '', '', '', '', '', '', 2, 'services', '2012-02-01 19:07:13', '2012-02-01 19:07:13'),
+(12, 'The street of nowhere', '200', 'California', '', '', '', 'USA', 11, 'clients', '2012-02-03 21:25:16', '2012-02-03 21:25:16');
 
 CREATE TABLE IF NOT EXISTS `clients` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -51,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
   KEY `name` (`client_name`),
   KEY `fk_clients_client_categories` (`client_category_id`),
   KEY `fk_clients_client_types` (`client_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 INSERT INTO `clients` (`id`, `client_name`, `corporate_name`, `phone`, `federal_tax_number`, `email`, `website`, `client_category_id`, `client_type_id`, `created`, `modified`) VALUES
 (1, 'Fake Company 1', 'Fake Company Inc', '5551234', '1234567890', 'nobody@fakecompany.com', 'www.fakecompany.com', 3, 2, '2012-01-23 17:40:05', '2012-01-23 18:36:41'),
@@ -60,8 +62,9 @@ INSERT INTO `clients` (`id`, `client_name`, `corporate_name`, `phone`, `federal_
 (5, 'Nothing Company', 'Notinhg Company Inc', '5551144', '', 'nobody@nothing.com', 'nothing.com', 3, 2, '2012-01-23 18:27:40', '2012-01-23 18:27:40'),
 (6, 'Zero the Hero', 'Zero the Hero', '555-8989', '', 'contact@zerothehero.com', '', 1, 1, '2012-01-23 18:32:55', '2012-01-23 18:32:55'),
 (7, 'No man company', 'No man Inc', '5557896', '', 'nobody@noman.com', 'noman.com', 2, 2, '2012-01-23 18:35:08', '2012-01-23 18:35:08'),
-(8, 'Almost zero company', 'Almost zero inc', '555-22222', '', 'nobody@almostzero.com', 'almostzero.com', 2, 2, '2012-01-23 19:55:30', '2012-01-24 16:40:42'),
-(10, 'Christine Sixteen', 'KISS Inc', '555-33333', '', 'chistine@kiss.com', '16.com', 3, 1, '2012-01-24 17:06:29', '2012-01-24 17:06:29');
+(8, 'Almost zero company', 'Almost zero inc', '555666666', '', 'nobody@almostzero.com', 'almostzero.com', 2, 2, '2012-01-23 19:55:30', '2012-02-02 19:54:54'),
+(10, 'Christine Sixteen', 'KISS Inc', '555-33333', '', 'chistine@kiss.com', '16.com', 3, 1, '2012-01-24 17:06:29', '2012-01-24 17:06:29'),
+(11, 'The Safe Company', '', '', '', '', '', 1, 2, '2012-02-03 21:25:16', '2012-02-03 21:25:16');
 
 CREATE TABLE IF NOT EXISTS `client_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -105,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 INSERT INTO `contacts` (`id`, `client_id`, `contact_name`, `role`, `birth_date`, `cell_phone`, `phone`, `email`, `created`, `modified`) VALUES
-(1, 6, 'John', 'Vice-president', NULL, '', '', '', '2012-01-24 19:15:07', '2012-01-24 19:15:07');
+(1, 6, 'John', 'Vice-president', '1970-02-28', '555-1234', '555-6543', 'john@zerothehero.com', '2012-01-24 19:15:07', '2012-02-05 22:39:14');
 
 CREATE TABLE IF NOT EXISTS `professionals` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -140,11 +143,12 @@ CREATE TABLE IF NOT EXISTS `professionals_services` (
   UNIQUE KEY `professional_id` (`professional_id`,`service_id`),
   KEY `fk_employees_services_services` (`service_id`),
   KEY `fk_professionals_services_professionals` (`professional_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 INSERT INTO `professionals_services` (`id`, `professional_id`, `service_id`, `total_time`, `total_value`, `payment_date`, `created`, `modified`) VALUES
-(5, 1, 1, NULL, NULL, NULL, '2012-01-26 21:36:26', '2012-01-26 21:36:26'),
-(7, 2, 1, NULL, NULL, NULL, '2012-01-28 13:01:54', '2012-01-28 13:01:54');
+(7, 2, 1, 16, NULL, NULL, '2012-01-28 13:01:54', '2012-02-01 19:01:45'),
+(12, 1, 1, 20, NULL, NULL, '2012-02-01 18:05:23', '2012-02-01 19:02:16'),
+(17, 1, 2, 24, 240, NULL, '2012-02-01 19:19:13', '2012-02-03 19:48:43');
 
 CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -167,10 +171,11 @@ CREATE TABLE IF NOT EXISTS `services` (
   KEY `fk_services_clients` (`client_id`),
   KEY `fk_services_service_types` (`service_type_id`),
   KEY `fk_services_service_states` (`service_state_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 INSERT INTO `services` (`id`, `service_state_id`, `client_id`, `service_type_id`, `approval_date`, `expiration_date`, `payment_date`, `service_description`, `begin_date`, `end_date`, `estimated_value`, `real_value`, `discount_value`, `paid_value`, `created`, `modified`) VALUES
-(1, 1, 8, 1, '2012-01-25', NULL, NULL, '', '2012-02-01', '2012-02-10', 1000, NULL, NULL, NULL, '2012-01-25 13:35:44', '2012-01-25 13:35:44');
+(1, 1, 8, 1, '2012-01-25', NULL, NULL, '', '2012-02-01', '2012-02-10', 1000, NULL, NULL, NULL, '2012-01-25 13:35:44', '2012-01-25 13:35:44'),
+(2, 3, 10, 1, '2011-12-02', '2012-01-05', NULL, '', '2011-12-05', '2012-02-15', NULL, NULL, NULL, NULL, '2012-02-01 19:07:13', '2012-02-01 19:07:13');
 
 CREATE TABLE IF NOT EXISTS `service_states` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -207,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 INSERT INTO `settings` (`id`, `my_company_name`, `hourly_rate`, `language`, `modified`) VALUES
-(1, 'Example Company', 10, 'eng', '2012-01-12 00:00:00');
+(1, 'Example Company', 10, 'eng', '2012-02-03 18:35:37');
 
 CREATE TABLE IF NOT EXISTS `skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -243,8 +248,14 @@ CREATE TABLE IF NOT EXISTS `skills_professionals` (
   UNIQUE KEY `skill_id` (`skill_id`,`professional_id`),
   KEY `fk_skills_employees_skills` (`skill_id`),
   KEY `fk_skills_professionals_professionals` (`professional_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
+INSERT INTO `skills_professionals` (`id`, `skill_id`, `professional_id`, `rating`, `created`, `modified`) VALUES
+(1, 6, 1, 3, '2012-02-01 22:44:00', '2012-02-05 22:33:03'),
+(4, 12, 1, 5, '2012-02-01 23:15:56', '2012-02-05 22:37:21'),
+(6, 3, 2, 4, '2012-02-05 22:39:55', '2012-02-05 22:40:01'),
+(19, 3, 1, 3, '2012-02-06 12:34:14', '2012-02-06 12:34:24'),
+(20, 10, 1, 1, '2012-02-07 19:17:58', '2012-02-07 19:18:06');
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -254,8 +265,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
+INSERT INTO `users` (`id`, `username`, `password`, `role`, `created`, `modified`) VALUES
+(1, 'admin', 'e4c8c2fac7d52851cb45b270346ad87d286a05ce', 'admin', '2012-02-06 20:29:58', '2012-02-06 20:30:01'),
+(2, 'user', '72a8ff1b307deeb8d6233bfbe29444acb6857234', 'user', '2012-02-07 09:48:37', '2012-02-07 09:55:06'),
+(3, 'guest', '062f0b6acbf33acc21318c6d1665d3a999c7fdc9', 'guest', '2012-02-07 09:48:49', '2012-02-07 09:49:07');
 
 
 ALTER TABLE `clients`
