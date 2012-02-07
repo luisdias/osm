@@ -77,6 +77,11 @@ $(function() {
         icons: {primary: "ui-icon-search"}
     });
     
+    // login button
+    $(".submit input:contains('Login')").button( {
+        icons: {primary: "ui-icon-locked"}
+    });      
+    
     if ( $('#flashMessage').text() != '') { 
         $( "#flashMessage" ).dialog({
             modal: true,
@@ -87,20 +92,6 @@ $(function() {
             }
         });
     }
-
-//    $.fn.tipsy.defaults = {
-//        delayIn: 0,      // delay before showing tooltip (ms)
-//        delayOut: 0,     // delay before hiding tooltip (ms)
-//        fade: false,     // fade tooltips in/out?
-//        fallback: '',    // fallback text to use when no tooltip text
-//        gravity: 'n',    // gravity
-//        html: false,     // is tooltip content HTML?
-//        live: false,     // use live event support?
-//        offset: 0,       // pixel offset of tooltip from element
-//        opacity: 0.8,    // opacity of tooltip
-//        title: 'title',  // attribute/callback containing tooltip text
-//        trigger: 'hover' // how tooltip is triggered - hover | focus | manual
-//    };
 
     $('input[title]').tipsy({trigger: 'focus', gravity: 's', fade: true});
     $('select[title]').tipsy({trigger: 'focus', gravity: 's', fade: true});
