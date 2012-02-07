@@ -27,7 +27,8 @@ class User extends AppModel {
     public function __construct($id = false, $table = null, $ds = null) {
         parent::__construct($id, $table, $ds);
         $this->validate = array(
-            'username' => array(                
+            'username' => array(
+                        'notEmpty' => array(
                             'rule' => 'notEmpty',
                             'message' => __('User name is required',true)
                         ),
@@ -36,9 +37,9 @@ class User extends AppModel {
                                 'message' => __('User name already in use',true),
                         ),                         
                         'length' => array(
-                            'rule' => array('minLength', 5),  
-                            'message' => __('Minimun size : 5 characters',true)
-                        ),
+                            'rule' => array('minLength', 4),  
+                            'message' => __('Minimun size : 4 characters',true)
+                        )),
             'new_password' => array(
                     'notempty' => array(
                             'rule' => array('notempty'),
@@ -46,8 +47,8 @@ class User extends AppModel {
                             'on' => 'udpate'
                     ),
                     'length' => array(
-                        'rule' => array('minLength', 5),  
-                        'message' => __('Minimun size : 5 characters',true),
+                        'rule' => array('minLength', 4),  
+                        'message' => __('Minimun size : 4 characters',true),
                         'on' => 'update'
                     ),                    
                     'passwordConfirm' => array(
