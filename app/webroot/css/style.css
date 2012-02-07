@@ -301,7 +301,8 @@ fieldset {
 	display:block;
 	padding:5px 10px 5px 10px;
 	line-height:20px;
-	margin-bottom:10px;        
+	margin-bottom:10px;
+        clear: both;
 }
 legend {
 	font-size:12px;
