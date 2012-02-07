@@ -20,7 +20,13 @@
 <body>
     <div id="container">
     <div id="header">
-            <h2>OSM - Open Service Manager</h2>
+        <h2>
+            OSM - Open Service Manager
+            <span class="floatRight">
+                <?php echo AuthComponent::user('username'); ?> | 
+                <?php echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout'),array('class'=>'topLink')); ?>                
+            </span>
+        </h2>
     <div id="topmenu">
         <div class="ui-tabs ui-widget ui-corner-all">            
         <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-corner-all">
@@ -46,17 +52,21 @@
             <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Skills'), array('controller' => 'skills', 'action' => 'index')); ?></li>
 
             <?php 
-            if ( $ctrl == 'clientcategories' || 
-                 $ctrl == 'clienttypes' ||    
-                 $ctrl == 'servicestates' ||
-                 $ctrl == 'servicetypes' ||
-                 $ctrl == 'users' ||
-                 $ctrl == 'settings' ) 
-                $cssClass = $cssCurrentClass;
-            else
-                $cssClass = $cssDefaultClass;
-            ?>
-            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Admin'), array('controller' => 'clientcategories', 'action' => 'index')); ?></li>
+            if ( AuthComponent::user('role') == "admin" ) {
+                if ( $ctrl == 'clientcategories' || 
+                     $ctrl == 'clienttypes' ||    
+                     $ctrl == 'servicestates' ||
+                     $ctrl == 'servicetypes' ||
+                     $ctrl == 'users' ||
+                     $ctrl == 'settings' ) 
+                    $cssClass = $cssCurrentClass;
+                else
+                    $cssClass = $cssDefaultClass;
+                ?>
+                <li class="<?php echo $cssClass; ?>">
+                <?php echo $this->Html->link(__('Admin'), array('controller' => 'clientcategories', 'action' => 'index')); ?>
+                </li>
+            <?php } ?>
           </ul>
         </div>
     </div>

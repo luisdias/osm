@@ -9,6 +9,9 @@
     echo $this->Html->meta('icon');
     echo $this->Html->css('theme');    
     echo $this->Html->css('style');
+    echo $this->Html->css('jquery-ui-1.8.17.custom');
+    echo $this->Html->css('tipsy');    
+    echo $this->Html->script(array('jquery-1.7.1.min.js','jquery-ui-1.8.17.custom.min.js','jquery.tipsy.js','default.js')); 
     echo $scripts_for_layout;
 ?>
 </head>
@@ -25,6 +28,7 @@
     <div id="wrapper">
         <div id="content">
         <?php echo $this->Session->flash(); ?>
+        <?php echo $this->Session->flash('auth'); ?>            
         <?php echo $content_for_layout; ?>
         </div>
     </div>
