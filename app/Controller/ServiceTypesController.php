@@ -24,8 +24,8 @@ App::uses('AppController', 'Controller');
 class ServiceTypesController extends AppController {
     
 public $paginate = array('limit'=>10, 'order'=>array('service_type_desc'=>'asc'));
-
 public $fk = null;
+public $adminOnly = true;
 
 public function __construct( $request = NULL, $response = NULL ) {
     parent::__construct($request,$response);

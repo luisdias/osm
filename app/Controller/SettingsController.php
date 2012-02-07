@@ -24,8 +24,8 @@ App::uses('AppController', 'Controller');
 class SettingsController extends AppController {
 
 public $paginate = array('limit'=>10, 'order'=>array('id'=>'asc'));
-
 public $fk = null;
+public $adminOnly = true;
 
 public function __construct( $request = NULL, $response = NULL ) {
     parent::__construct($request,$response);
