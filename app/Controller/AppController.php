@@ -22,6 +22,7 @@ public $fk = null;
 public $singularName = null;
 public $translatedSingularName = null; // translated singular name for view
 public $associatedModel = null;
+public $adminOnly = false;
 
 public $components = array('Session','Auth','Prg');
 
@@ -191,6 +192,20 @@ public function setRelated() {
  * @return type 
  */
 public function isAuthorized($user) {
+    if ($this->Auth->user('role') == 'user') {
+        if ($this->adminOnly && $this->action != 'logout' ) {
+            $this->Session->setFlash(__('Action not authorized for this role',true));
+            return false;            
+        }
+    }
+    if ($this->Auth->user('role') == 'guest') {
+        if ( ($this->action == 'add' || $this->action == 'edit' || $this->action == 'delete') || 
+                ( ( $this->action != 'logout' ) && ($this->adminOnly) ) ) {
+            $this->Session->setFlash(__('Action not authorized for this role',true));
+            return false;
+        }        
+    }
+    
     return true;
 }   
 
