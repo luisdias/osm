@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: OSM\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-09 08:48-0000\n"
-"PO-Revision-Date: 2012-02-09 21:31-0000\n"
+"PO-Revision-Date: 2012-02-09 21:46-0000\n"
 "Last-Translator: LD <ld@internet.com>\n"
-"Language-Team: Google translate <luis.edudias@gmail.com>\n"
+"Language-Team: Google translate\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -924,7 +924,7 @@ msgstr "Eliminar la configuración"
 
 #: View/Settings/view.ctp:49
 msgid "List Settings"
-msgstr ""
+msgstr "Lista de los ajustes"
 
 #: View/Settings/view.ctp:50
 msgid "New Setting"
