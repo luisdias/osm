@@ -1,0 +1,1039 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: osm\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-08 15:48-0000\n"
+"PO-Revision-Date: 2012-02-08 16:30-0000\n"
+"Last-Translator: LD <ld@internet.com>\n"
+"Language-Team: Luis Dias <luis.edudias@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop\n"
+"X-Poedit-Basepath: D:\\xampp\\htdocs\\osm\\app\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Controller/AppController.php:42
+msgid "Invalid login or password"
+msgstr "Login ou password inválido"
+
+#: Controller/AppController.php:43
+msgid "Without access permission"
+msgstr "Sem permissão de acesso"
+
+#: Controller/AppController.php:64
+#: Controller/AppController.php:75
+#: Controller/AppController.php:153
+msgid "Invalid "
+msgstr "Inválido"
+
+#: Controller/AppController.php:84
+msgid "New"
+msgstr "Novo"
+
+#: Controller/AppController.php:86
+msgid "Edit"
+msgstr "Editar"
+
+#: Controller/AppController.php:118
+msgid " has been saved"
+msgstr " foi gravado"
+
+#: Controller/AppController.php:126
+msgid " could not be saved. Please, try again."
+msgstr " não pode ser gravado. Por favor, tente de novo."
+
+#: Controller/AppController.php:164
+msgid " deleted"
+msgstr " excluído"
+
+#: Controller/AppController.php:173
+msgid "There are related records. Record was not deleted."
+msgstr "Existem itens relacionados. Item não foi excluído."
+
+#: Controller/AppController.php:197
+#: Controller/AppController.php:204
+msgid "Action not authorized for this role"
+msgstr "Acção não autorizada para este perfil"
+
+#: Controller/ClientCategoriesController.php:33
+msgid "Client category"
+msgstr "Categoria de cliente"
+
+#: Controller/ClientsController.php:39
+msgid "Client"
+msgstr "Cliente"
+
+#: Controller/ClientTypesController.php:32
+msgid "Client type"
+msgstr "Tipo de cliente"
+
+#: Controller/ContactsController.php:34
+msgid "Contact"
+msgstr "Contacto"
+
+#: Controller/ProfessionalsController.php:36
+msgid "Professional"
+msgstr "Profissional"
+
+#: Controller/ProfessionalsServicesController.php:31
+msgid "Professional Service"
+msgstr "Serviço X Profissional"
+
+#: Controller/ServicesController.php:37
+msgid "Service"
+msgstr "Serviço"
+
+#: Controller/ServiceStatesController.php:33
+msgid "State"
+msgstr "Estado"
+
+#: Controller/ServiceTypesController.php:33
+msgid "Service type"
+msgstr "Tipo de serviço"
+
+#: Controller/SettingsController.php:33
+msgid "Setting"
+msgstr "Configuração"
+
+#: Controller/SkillsController.php:34
+msgid "Skill"
+msgstr "Habilidades"
+
+#: Controller/SkillsProfessionalsController.php:33
+msgid "Skill Professional"
+msgstr "Habilidade X Profissional"
+
+#: Controller/UsersController.php:33
+msgid "User"
+msgstr "Utilizador"
+
+#: Controller/UsersController.php:47
+msgid "Your username/password combination was incorrect."
+msgstr "A combinação username/password está incorrecta."
+
+#: Controller/UsersController.php:63
+msgid "Password updated successfully"
+msgstr "Password actualizada com sucesso"
+
+#: Controller/UsersController.php:66
+msgid "Passwords do not match. Please try again"
+msgstr "Passwords não conferem. Por favor tente de novo"
+
+#: Model/Address.php:40
+msgid "Street must be at least 5 characters long"
+msgstr "A rua deve ter no mínimo 5 caracteres"
+
+#: Model/Client.php:50
+#: Model/Contact.php:41
+#: Model/Professional.php:40
+msgid "Name is required"
+msgstr "Nome é obrigatório"
+
+#: Model/Client.php:55
+msgid "Category is required"
+msgstr "Categoria é obrigatória"
+
+#: Model/Client.php:60
+msgid "Type is required"
+msgstr "Tipo é obrigatório"
+
+#: Model/Client.php:65
+#: Model/Contact.php:51
+#: Model/Professional.php:45
+msgid "Invalid email"
+msgstr "Email inválido"
+
+#: Model/Client.php:70
+msgid "Invalid website"
+msgstr "Website inválido"
+
+#: Model/ClientCategory.php:36
+#: Model/ClientType.php:35
+msgid "Description is required"
+msgstr "Descrição é obrigatória"
+
+#: Model/Contact.php:45
+msgid "Client is required"
+msgstr "Cliente é obrigatório"
+
+#: Model/Contact.php:56
+msgid "Invalid date (yyyy-mm-dd)"
+msgstr "Data inválida (aaaa-mm-dd)"
+
+#: Model/ProfessionalsService.php:38
+msgid "Professional is required"
+msgstr "Profissional é obrigatório"
+
+#: Model/ProfessionalsService.php:43
+msgid "Service is required"
+msgstr "Serviço é obrigatório"
+
+#: Model/Service.php:44
+msgid "State is required"
+msgstr "Estado é obrigatório"
+
+#: Model/Service.php:54
+msgid "Service type is required"
+msgstr "Tipo de serviço é obrigatório"
+
+#: Model/Setting.php:34
+msgid "Company name is required"
+msgstr "Nome da empresa é obrigatório"
+
+#: Model/Setting.php:38
+msgid "Hourly rate is required"
+msgstr "Valor da hora é obrigatório"
+
+#: Model/Setting.php:42
+msgid "Language is required"
+msgstr "Idioma é obrigatório"
+
+#: Model/User.php:33
+msgid "User name is required"
+msgstr "Nome do utilizador é obrigatório"
+
+#: Model/User.php:37
+msgid "User name already in use"
+msgstr "Nome do utilizador já está em uso"
+
+#: Model/User.php:41
+#: Model/User.php:51
+msgid "Minimun size : 4 characters"
+msgstr "Tamanho mínimo : 4 caracteres"
+
+#: Model/User.php:46
+msgid "Password is required"
+msgstr "Password é obrigatória"
+
+#: Model/User.php:56
+msgid "Passwords do not match"
+msgstr "Passwords não conferem"
+
+#: View/ClientCategories/form.ctp:22
+msgid " Client Category"
+msgstr " Categoria de cliente"
+
+#: View/ClientCategories/form.ctp:25
+#: View/ClientTypes/form.ctp:25
+msgid "Description"
+msgstr "Descrição"
+
+#: View/ClientCategories/form.ctp:25
+#: View/Clients/form.ctp:31
+#: View/Clients/form.ctp:32
+#: View/Clients/form.ctp:33
+#: View/ClientTypes/form.ctp:25
+#: View/Contacts/form.ctp:25
+#: View/Contacts/form.ctp:26
+msgid "Required field "
+msgstr "Campo obrigatório"
+
+#: View/ClientCategories/form.ctp:25
+#: View/Clients/form.ctp:33
+#: View/Clients/form.ctp:34
+#: View/Clients/form.ctp:35
+#: View/Clients/form.ctp:36
+#: View/Clients/form.ctp:37
+#: View/Clients/form.ctp:38
+#: View/ClientTypes/form.ctp:25
+#: View/Contacts/form.ctp:26
+#: View/Contacts/form.ctp:27
+#: View/Contacts/form.ctp:29
+#: View/Contacts/form.ctp:30
+#: View/Contacts/form.ctp:31
+#: View/Elements/address_form.ctp:19
+#: View/Elements/address_form.ctp:20
+#: View/Elements/address_form.ctp:21
+#: View/Elements/address_form.ctp:22
+#: View/Elements/address_form.ctp:23
+#: View/Elements/address_form.ctp:24
+#: View/Elements/address_form.ctp:25
+msgid "Max length"
+msgstr "Tamanho máximo"
+
+#: View/ClientCategories/form.ctp:28
+#: View/Clients/form.ctp:46
+#: View/ClientTypes/form.ctp:28
+#: View/Contacts/form.ctp:34
+msgid "Submit"
+msgstr "Gravar"
+
+#: View/ClientCategories/form.ctp:29
+#: View/Clients/form.ctp:47
+#: View/ClientTypes/form.ctp:29
+#: View/Contacts/form.ctp:35
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: View/ClientCategories/index.ctp:20
+msgid "Client Categories"
+msgstr "Categorias de cliente"
+
+#: View/ClientCategories/index.ctp:24
+#: View/ClientCategories/view.ctp:40
+#: View/Clients/index.ctp:28
+#: View/Clients/view.ctp:76
+#: View/Clients/view.ctp:95
+#: View/ClientTypes/index.ctp:24
+#: View/ClientTypes/view.ctp:40
+#: View/Contacts/index.ctp:30
+#: View/Contacts/view.ctp:70
+msgid "Actions"
+msgstr "Acções"
+
+#: View/ClientCategories/index.ctp:31
+#: View/Clients/index.ctp:43
+#: View/Clients/view.ctp:108
+#: View/ClientTypes/index.ctp:31
+#: View/Contacts/index.ctp:45
+msgid "View"
+msgstr "Visualizar"
+
+#: View/ClientCategories/index.ctp:33
+#: View/Clients/index.ctp:45
+#: View/Clients/view.ctp:110
+#: View/ClientTypes/index.ctp:33
+#: View/Contacts/index.ctp:47
+msgid "Delete"
+msgstr "Excluir"
+
+#: View/ClientCategories/index.ctp:33
+#: View/ClientCategories/view.ctp:43
+#: View/Clients/index.ctp:45
+#: View/Clients/view.ctp:79
+#: View/Clients/view.ctp:110
+#: View/ClientTypes/index.ctp:33
+#: View/ClientTypes/view.ctp:43
+#: View/Contacts/index.ctp:47
+#: View/Contacts/view.ctp:73
+#, php-format
+msgid "Are you sure you want to delete # %s?"
+msgstr "Tem certeza de que queres excluir # %s?"
+
+#: View/ClientCategories/index.ctp:42
+#: View/ClientCategories/view.ctp:45
+msgid "New Client Category"
+msgstr "Nova categoria de cliente"
+
+#: View/ClientCategories/view.ctp:20
+#: View/Clients/view.ctp:22
+msgid "Client Category"
+msgstr "Categoria de cliente"
+
+#: View/ClientCategories/view.ctp:22
+msgid "Client Category Desc"
+msgstr "Descrição"
+
+#: View/ClientCategories/view.ctp:27
+#: View/Clients/view.ctp:63
+#: View/ClientTypes/view.ctp:27
+#: View/Contacts/view.ctp:57
+msgid "Created"
+msgstr "Criado"
+
+#: View/ClientCategories/view.ctp:32
+#: View/Clients/view.ctp:68
+#: View/ClientTypes/view.ctp:32
+#: View/Contacts/view.ctp:62
+msgid "Modified"
+msgstr "Modificado"
+
+#: View/ClientCategories/view.ctp:42
+msgid "Edit Client Category"
+msgstr "Editar categoria de cliente"
+
+#: View/ClientCategories/view.ctp:43
+msgid "Delete Client Category"
+msgstr "Excluir categoria de cliente"
+
+#: View/ClientCategories/view.ctp:44
+msgid "List Client Categories"
+msgstr "Listar categorias de cliente"
+
+#: View/Clients/form.ctp:22
+msgid " Client"
+msgstr " Cliente"
+
+#: View/Clients/form.ctp:26
+msgid "Main"
+msgstr "Principal"
+
+#: View/Clients/form.ctp:27
+msgid "Address"
+msgstr "Morada"
+
+#: View/Clients/form.ctp:31
+#: View/Clients/form.ctp:32
+#: View/Contacts/form.ctp:25
+msgid "---Select---"
+msgstr "---Seleccionar---"
+
+#: View/Clients/index.ctp:20
+msgid "Clients"
+msgstr "Clientes"
+
+#: View/Clients/index.ctp:54
+#: View/Clients/view.ctp:81
+msgid "New Client"
+msgstr "Novo cliente"
+
+#: View/Clients/view.ctp:27
+#: View/ClientTypes/view.ctp:20
+msgid "Client Type"
+msgstr "Tipo de cliente"
+
+#: View/Clients/view.ctp:32
+msgid "Client Name"
+msgstr "Nome"
+
+#: View/Clients/view.ctp:37
+msgid "Corporate Name"
+msgstr "Nome de empresa"
+
+#: View/Clients/view.ctp:42
+#: View/Clients/view.ctp:93
+#: View/Contacts/view.ctp:47
+msgid "Phone"
+msgstr "Telefone"
+
+#: View/Clients/view.ctp:47
+msgid "Federal Tax Id"
+msgstr "VAT"
+
+#: View/Clients/view.ctp:52
+#: View/Clients/view.ctp:94
+#: View/Contacts/view.ctp:52
+msgid "Email"
+msgstr "Email"
+
+#: View/Clients/view.ctp:57
+msgid "Website"
+msgstr "Website"
+
+#: View/Clients/view.ctp:78
+msgid "Edit Client"
+msgstr "Editar cliente"
+
+#: View/Clients/view.ctp:79
+msgid "Delete Client"
+msgstr "Excluir cliente"
+
+#: View/Clients/view.ctp:80
+msgid "List Clients"
+msgstr "Listar clientes"
+
+#: View/Clients/view.ctp:85
+msgid "Related Contacts"
+msgstr "Contactos relacionados"
+
+#: View/Clients/view.ctp:89
+#: View/Contacts/view.ctp:27
+msgid "Contact Name"
+msgstr "Nome"
+
+#: View/Clients/view.ctp:90
+#: View/Contacts/view.ctp:32
+msgid "Role"
+msgstr "Papel"
+
+#: View/Clients/view.ctp:91
+#: View/Contacts/view.ctp:37
+msgid "Birth Date"
+msgstr "Data de nascimento"
+
+#: View/Clients/view.ctp:92
+#: View/Contacts/view.ctp:42
+msgid "Cell Phone"
+msgstr "Telemóvel"
+
+#: View/Clients/view.ctp:119
+#: View/Contacts/index.ctp:56
+#: View/Contacts/view.ctp:75
+msgid "New Contact"
+msgstr "Novo contacto"
+
+#: View/ClientTypes/form.ctp:22
+msgid " Client Type"
+msgstr " Tipo de cliente"
+
+#: View/ClientTypes/index.ctp:20
+msgid "Client Types"
+msgstr "Tipos de cliente"
+
+#: View/ClientTypes/index.ctp:42
+#: View/ClientTypes/view.ctp:45
+msgid "New Client Type"
+msgstr "Novo tipo de cliente"
+
+#: View/ClientTypes/view.ctp:22
+msgid "Client Type Desc"
+msgstr "Descrição"
+
+#: View/ClientTypes/view.ctp:42
+msgid "Edit Client Type"
+msgstr "Editar tipo de cliente"
+
+#: View/ClientTypes/view.ctp:43
+msgid "Delete Client Type"
+msgstr "Excluir tipo de cliente"
+
+#: View/ClientTypes/view.ctp:44
+msgid "List Client Types"
+msgstr "Listar tipos de cliente"
+
+#: View/Contacts/form.ctp:22
+msgid " Contact"
+msgstr " Contacto"
+
+#: View/Contacts/form.ctp:28
+msgid "Format yyyy-mm-dd"
+msgstr "Formato aaaa-mm-dd"
+
+#: View/Contacts/index.ctp:20
+msgid "Contacts"
+msgstr "Contactos"
+
+#: View/Contacts/view.ctp:72
+msgid "Edit Contact"
+msgstr "Editar contactos"
+
+#: View/Contacts/view.ctp:73
+msgid "Delete Contact"
+msgstr "Excluir contacto"
+
+#: View/Contacts/view.ctp:74
+msgid "List Contacts"
+msgstr "Listar contactos"
+
+#: View/Elements/address_form.ctp:19
+msgid "Min length"
+msgstr "Tamanho mínimo"
+
+#: View/Elements/address_view.ctp:20
+msgid "Street"
+msgstr "Rua"
+
+#: View/Elements/address_view.ctp:25
+msgid "Number"
+msgstr "Número"
+
+#: View/Elements/address_view.ctp:30
+msgid "City"
+msgstr "Cidade"
+
+#: View/Elements/address_view.ctp:35
+msgid "District"
+msgstr "Distrito"
+
+#: View/Elements/address_view.ctp:45
+msgid "Zip Code"
+msgstr "Código Postal"
+
+#: View/Elements/address_view.ctp:50
+msgid "Country"
+msgstr "País"
+
+#: View/Elements/paginator.ctp:20
+msgid "Page"
+msgstr "Página"
+
+#: View/Elements/paginator.ctp:24
+msgid "out of"
+msgstr "de"
+
+#: View/Elements/paginator.ctp:26
+msgid "page(s)"
+msgstr "página(s)"
+
+#: View/Elements/paginator.ctp:27
+msgid "Total records"
+msgstr "Total"
+
+#: View/Elements/panel.ctp:20
+msgid "Client categories"
+msgstr "Categorias de cliente"
+
+#: View/Elements/panel.ctp:21
+msgid "Client types"
+msgstr "Tipos de cliente"
+
+#: View/Elements/panel.ctp:22
+msgid "Service states"
+msgstr "Estados de serviço"
+
+#: View/Elements/panel.ctp:23
+msgid "Service types"
+msgstr "Tipos de serviço"
+
+#: View/Elements/panel.ctp:24
+msgid "Users"
+msgstr "Utilizadores"
+
+#: View/Elements/panel.ctp:25
+msgid "Settings"
+msgstr "Configurações"
+
+#: View/Elements/related_clients.ctp:20
+msgid "Related Clients"
+msgstr "Clientes relacionados"
+
+#: View/Elements/related_services.ctp:20
+msgid "Related Services"
+msgstr "Serviços relacionados"
+
+#: View/Elements/related_services.ctp:24
+msgid "Service State"
+msgstr "Estado de serviço"
+
+#: View/Elements/related_services.ctp:26
+msgid "Service Type"
+msgstr "Tipo de serviço"
+
+#: View/Elements/related_services.ctp:27
+msgid "Approval Date"
+msgstr "Data de aprovação"
+
+#: View/Elements/related_services.ctp:28
+msgid "Expiration Date"
+msgstr "Data de vencimento"
+
+#: View/Elements/related_services.ctp:29
+msgid "Payment Date"
+msgstr "Data de pagamento"
+
+#: View/Elements/related_services.ctp:30
+msgid "Service Description"
+msgstr "Descrição"
+
+#: View/Elements/related_services.ctp:31
+msgid "Estimated Value"
+msgstr "Valor estimado"
+
+#: View/Elements/related_services.ctp:32
+msgid "Real Value"
+msgstr "Valor real"
+
+#: View/Elements/related_services.ctp:33
+msgid "Discount Value"
+msgstr "Desconto"
+
+#: View/Elements/related_services.ctp:34
+msgid "Paid Value"
+msgstr "Valor pago"
+
+#: View/Elements/related_services.ctp:88
+msgid "New Service"
+msgstr "Novo serviço"
+
+#: View/Elements/clients/panel.ctp:19
+#: View/Elements/clients/panel.ctp:20
+#: View/Elements/services/panel.ctp:19
+#: View/Elements/services/panel.ctp:20
+msgid "---All---"
+msgstr "---Todos---"
+
+#: View/Elements/clients/panel.ctp:22
+#: View/Elements/contacts/panel.ctp:20
+#: View/Elements/professionals/panel.ctp:20
+#: View/Elements/services/panel.ctp:21
+#: View/Elements/skills/panel.ctp:20
+msgid "Filter"
+msgstr "Filtrar"
+
+#: View/Layouts/default.ctp:27
+msgid "Logout"
+msgstr "Sair"
+
+#: View/Layouts/default.ctp:46
+msgid "Services"
+msgstr "Serviços"
+
+#: View/Layouts/default.ctp:49
+msgid "Professionals"
+msgstr "Profissionais"
+
+#: View/Layouts/default.ctp:52
+msgid "Skills"
+msgstr "Habilidades"
+
+#: View/Layouts/default.ctp:67
+msgid "Admin"
+msgstr "Admin"
+
+#: View/Professionals/form.ctp:22
+msgid " Professional"
+msgstr " Profissional"
+
+#: View/Professionals/form.ctp:27
+#: View/Professionals/view.ctp:52
+msgid "Bank"
+msgstr "Banco"
+
+#: View/Professionals/form.ctp:34
+msgid "Male"
+msgstr "Masculino"
+
+#: View/Professionals/form.ctp:34
+msgid "Female"
+msgstr "Feminino"
+
+#: View/Professionals/index.ctp:51
+#: View/Professionals/view.ctp:86
+#: View/ProfessionalsServices/view.ctp:67
+msgid "New Professional"
+msgstr "Novo profissional"
+
+#: View/Professionals/list.ctp:20
+msgid "Professionals - drag and drop"
+msgstr "Profissionais - drag and drop"
+
+#: View/Professionals/view.ctp:22
+#: View/Services/view.ctp:114
+msgid "Professional Name"
+msgstr "Nome"
+
+#: View/Professionals/view.ctp:32
+msgid "Sex"
+msgstr "Sexo"
+
+#: View/Professionals/view.ctp:47
+msgid "Social Security Number"
+msgstr "NIF"
+
+#: View/Professionals/view.ctp:57
+msgid "Account Number"
+msgstr "Número da Conta"
+
+#: View/Professionals/view.ctp:62
+msgid "Account Name"
+msgstr "Nome do titular"
+
+#: View/Professionals/view.ctp:83
+msgid "Edit Professional"
+msgstr "Editar profissional"
+
+#: View/Professionals/view.ctp:84
+msgid "Delete Professional"
+msgstr "Excluir profissional"
+
+#: View/Professionals/view.ctp:85
+#: View/ProfessionalsServices/view.ctp:66
+msgid "List Professionals"
+msgstr "Listar profissionais"
+
+#: View/Professionals/view.ctp:95
+msgid "Approval date"
+msgstr "Data de aprovação"
+
+#: View/Professionals/view.ctp:96
+#: View/ProfessionalsServices/display.ctp:23
+#: View/Services/view.ctp:115
+msgid "Total time"
+msgstr "Tempo total"
+
+#: View/Professionals/view.ctp:97
+#: View/ProfessionalsServices/display.ctp:24
+#: View/Services/view.ctp:116
+msgid "Total value"
+msgstr "Valor total"
+
+#: View/Professionals/view.ctp:98
+#: View/ProfessionalsServices/display.ctp:25
+#: View/Services/view.ctp:117
+msgid "Payment date"
+msgstr "Data de pagamento"
+
+#: View/Professionals/view.ctp:116
+msgid "Related Skills"
+msgstr "Habilidades relacionadas"
+
+#: View/Professionals/view.ctp:121
+msgid "Rating"
+msgstr "Avaliação"
+
+#: View/ProfessionalsServices/display.ctp:19
+msgid "Professionals for Service = "
+msgstr "Profissionais para o Serviço = "
+
+#: View/ProfessionalsServices/form.ctp:22
+msgid " Professionals Service"
+msgstr " Profissionais X Serviço"
+
+#: View/ProfessionalsServices/index.ctp:25
+msgid "Professional already associated with this service"
+msgstr "Profissional já está associado com este serviço"
+
+#: View/ProfessionalsServices/view.ctp:20
+msgid "Professionals Service"
+msgstr "Profissionais X Serviço"
+
+#: View/ProfessionalsServices/view.ctp:32
+msgid "Total Time"
+msgstr "Tempo total"
+
+#: View/ProfessionalsServices/view.ctp:37
+msgid "Total Value"
+msgstr "Valor total"
+
+#: View/ProfessionalsServices/view.ctp:62
+msgid "Edit Professionals Service"
+msgstr "Editar Profissionais X Serviço"
+
+#: View/ProfessionalsServices/view.ctp:63
+msgid "Delete Professionals Service"
+msgstr "Excluir Profissionais X Serviço"
+
+#: View/ProfessionalsServices/view.ctp:64
+msgid "List Professionals Services"
+msgstr "Listar Profissionais X Serviço"
+
+#: View/ProfessionalsServices/view.ctp:65
+msgid "New Professionals Service"
+msgstr "Novo Profissionais X Serviço"
+
+#: View/ProfessionalsServices/view.ctp:68
+#: View/Services/view.ctp:105
+msgid "List Services"
+msgstr "Listar serviços"
+
+#: View/Services/form.ctp:22
+msgid " Service"
+msgstr " Serviço"
+
+#: View/Services/form.ctp:27
+msgid "Dates"
+msgstr "Datas"
+
+#: View/Services/form.ctp:29
+msgid "Values"
+msgstr "Valores"
+
+#: View/Services/form.ctp:50
+msgid "Free text"
+msgstr "Texto livre"
+
+#: View/Services/form.ctp:55
+#: View/Services/form.ctp:56
+#: View/Services/form.ctp:57
+#: View/Services/form.ctp:58
+msgid "Numeric field"
+msgstr "Campo numérico"
+
+#: View/Services/view.ctp:57
+msgid "Begin Date"
+msgstr "Data de início"
+
+#: View/Services/view.ctp:62
+msgid "End Date"
+msgstr "Data do fecho"
+
+#: View/Services/view.ctp:103
+msgid "Edit Service"
+msgstr "Editar serviço"
+
+#: View/Services/view.ctp:104
+msgid "Delete Service"
+msgstr "Excluir serviço"
+
+#: View/Services/view.ctp:110
+msgid "Related Professionals"
+msgstr "Profissionais associados"
+
+#: View/ServiceStates/form.ctp:22
+msgid " Service State"
+msgstr " Estado de serviço"
+
+#: View/ServiceStates/index.ctp:20
+msgid "Service States"
+msgstr "Estados de serviço"
+
+#: View/ServiceStates/index.ctp:42
+#: View/ServiceStates/view.ctp:45
+msgid "New Service State"
+msgstr "Novo estado de serviço"
+
+#: View/ServiceStates/view.ctp:20
+msgid "Status"
+msgstr ""
+
+#: View/ServiceStates/view.ctp:42
+msgid "Edit Service State"
+msgstr "Editar estado de serviço"
+
+#: View/ServiceStates/view.ctp:43
+msgid "Delete Service State"
+msgstr "Excluir estado de serviço"
+
+#: View/ServiceStates/view.ctp:44
+msgid "List Service States"
+msgstr "Listar estados de serviço"
+
+#: View/ServiceTypes/form.ctp:22
+msgid " Service Type"
+msgstr " Tipo de serviço"
+
+#: View/ServiceTypes/index.ctp:20
+msgid "Service Types"
+msgstr "Tipos de serviço"
+
+#: View/ServiceTypes/index.ctp:42
+msgid "New Service Type"
+msgstr "Novo tipo de serviço"
+
+#: View/ServiceTypes/view.ctp:22
+msgid "Service Type Desc"
+msgstr "Descrição"
+
+#: View/ServiceTypes/view.ctp:42
+msgid "Edit Service Type"
+msgstr "Editar tipo de serviço"
+
+#: View/ServiceTypes/view.ctp:43
+msgid "Delete Service Type"
+msgstr "Excluir tipo de serviço"
+
+#: View/ServiceTypes/view.ctp:44
+msgid "List Service Types"
+msgstr "Listar tipos de serviço"
+
+#: View/Settings/form.ctp:22
+msgid " Setting"
+msgstr " Configuração"
+
+#: View/Settings/view.ctp:22
+msgid "My Company Name"
+msgstr "Nome da minha empresa"
+
+#: View/Settings/view.ctp:27
+msgid "Hourly Rate"
+msgstr "Valor da hora"
+
+#: View/Settings/view.ctp:32
+msgid "Language"
+msgstr "Idioma"
+
+#: View/Settings/view.ctp:47
+msgid "Edit Setting"
+msgstr "Editar configuração"
+
+#: View/Settings/view.ctp:48
+msgid "Delete Setting"
+msgstr "Excluir configuração"
+
+#: View/Settings/view.ctp:49
+msgid "List Settings"
+msgstr "Listar configuração"
+
+#: View/Settings/view.ctp:50
+msgid "New Setting"
+msgstr "Nova configuração"
+
+#: View/Skills/form.ctp:22
+msgid " Skill"
+msgstr " Habilidade"
+
+#: View/Skills/index.ctp:42
+#: View/Skills/view.ctp:45
+#: View/SkillsProfessionals/view.ctp:57
+msgid "New Skill"
+msgstr "Nova habilidade"
+
+#: View/Skills/list.ctp:20
+msgid "Skills - drag and drop"
+msgstr "Habilidades - drag and drop"
+
+#: View/Skills/view.ctp:22
+msgid "Skill Desc"
+msgstr "Descrição"
+
+#: View/Skills/view.ctp:42
+msgid "Edit Skill"
+msgstr "Editar habilidade"
+
+#: View/Skills/view.ctp:43
+msgid "Delete Skill"
+msgstr "Excluir habilidade"
+
+#: View/Skills/view.ctp:44
+#: View/SkillsProfessionals/view.ctp:56
+msgid "List Skills"
+msgstr "Listar habilidades"
+
+#: View/SkillsProfessionals/display.ctp:19
+msgid "Skills of Professional "
+msgstr "Habilidades do profissional"
+
+#: View/SkillsProfessionals/form.ctp:24
+msgid " Skills Professional"
+msgstr " Habilidades X Profissional"
+
+#: View/SkillsProfessionals/index.ctp:25
+msgid "Skill already associated with this professional"
+msgstr "Habilidade já está associada com este profissional"
+
+#: View/SkillsProfessionals/view.ctp:20
+msgid "Skills Professional"
+msgstr "Habilidades X Profissional"
+
+#: View/SkillsProfessionals/view.ctp:52
+msgid "Edit Skills Professional"
+msgstr "Editar Habilidades X Profissional"
+
+#: View/SkillsProfessionals/view.ctp:53
+msgid "Delete Skills Professional"
+msgstr "Excluir Habilidades X Profissional"
+
+#: View/SkillsProfessionals/view.ctp:54
+msgid "List Skills Professionals"
+msgstr "Listar Habilidades X Profissional"
+
+#: View/SkillsProfessionals/view.ctp:55
+msgid "New Skills Professional"
+msgstr "Nova Habilidade X Profissional"
+
+#: View/Users/form.ctp:22
+msgid " User"
+msgstr " Utilizador"
+
+#: View/Users/index.ctp:36
+msgid "Password"
+msgstr "Password"
+
+#: View/Users/index.ctp:46
+msgid "New User"
+msgstr "Novo utilizador"
+
+#: View/Users/login.ctp:3
+msgid "Login"
+msgstr "Login"
+
+#: View/Users/password_change.ctp:4
+msgid "Password change"
+msgstr "Alterar password"
+
+#: View/Users/password_change.ctp:9
+msgid "Enter the new password"
+msgstr "Digite a nova password"
+
+#: View/Users/password_change.ctp:10
+msgid "Enter the password confirmation"
+msgstr "Digite a confirmação da password"
+
+#: View/Users/view.ctp:22
+msgid "Username"
+msgstr "Nome de utilizador"
+
+#: View/Users/view.ctp:47
+msgid "Edit User"
+msgstr "Editar utilizador"
+
+#: View/Users/view.ctp:48
+msgid "Delete User"
+msgstr "Excluir utilizador"
+
+#: View/Users/view.ctp:49
+msgid "List Users"
+msgstr "Listar utilizador"
+
