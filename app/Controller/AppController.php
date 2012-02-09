@@ -33,7 +33,13 @@ public function __construct( $request = NULL, $response = NULL ) {
     $this->singularName = lcfirst(Inflector::singularize($this->name));
 }
 
-public function beforeFilter() {    
+public function beforeFilter() {
+    // TODO: save to text file, load on bootstrap, store in session
+    $settings = ClassRegistry::init('Setting'); // load Setting model
+    $setting = $settings->find('first');
+    $language = $setting['Setting']['language'];
+    Configure::write('Config.language', $language);
+
     $this->Auth->authenticate = array('Form'=>array('userModel'=>'User'));    
     $this->Auth->userModel = 'User';
     $this->Auth->loginAction=array('controller'=>'users','action'=>'login');
@@ -192,8 +198,11 @@ public function setRelated() {
  * @return type 
  */
 public function isAuthorized($user) {
+    if ($this->action == 'logout' || $this->action == 'login') {
+        return true;
+    }
     if ($this->Auth->user('role') == 'user') {
-        if ($this->adminOnly && $this->action != 'logout' ) {
+        if ($this->adminOnly) {
             $this->Session->setFlash(__('Action not authorized for this role',true));
             return false;            
         }
