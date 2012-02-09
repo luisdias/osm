@@ -24,7 +24,7 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('my_company_name',array('size'=>'50','maxlength'=>'50','title'=>__('Required field ') . __('Max length').' = 50'));
 		echo $this->Form->input('hourly_rate',array('title'=>__('Required field ') . __('Numeric field')));
-                $options=array('eng'=>'English','spa'=>'Spanish','fre'=>'French','ita'=>'Italian','por'=>'Portuguese');
+                $options=array('eng'=>'English','spa'=>'Spanish','fre'=>'French','ita'=>'Italian','por'=>'Portuguese','bra'=>'Brazilian-Portuguese');
 		echo $this->Form->input('language',array('type'=>'select','options'=>$options));
 	?>
 	</fieldset>
