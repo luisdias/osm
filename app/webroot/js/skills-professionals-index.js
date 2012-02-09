@@ -84,11 +84,11 @@ function updateGrid(firstLevel) {
           "fkid=" + fkid,    
     success: function(grid){
         $('#skillsProfessionals').html(grid);
-        $("td.actions a:contains('Edit')").button( {
+        $("td.actions a[href*='edit']").button( {
             icons: {primary: "ui-icon-folder-open"},
             text: false
         });
-        $("td.actions a:contains('Delete')").button( {
+        $("td.actions a[href*='#']").button( {
             icons: {primary: "ui-icon-cancel"},
             text: false
         });
