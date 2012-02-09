@@ -35,7 +35,7 @@ public function __construct( $request = NULL, $response = NULL ) {
 }
 public function beforeFilter() {
     parent::beforeFilter();
-    $this->Auth->allow('index','view','passwordChange');
+    $this->Auth->deny('index','view','passwordChange');
 }
 
 public function login() {
