@@ -23,43 +23,43 @@ $(function() {
     });
 
     // actions buttons for view.ctp 
-    $(".actions ul li a:contains('New')").button( {
+    $(".actions ul li a[href!='add'][href!='#'][href!='edit']").button( {
+        icons: {primary: "ui-icon-grip-solid-horizontal"}
+    });
+    
+    $(".actions ul li a[href*='add']").button( {
         icons: {primary: "ui-icon-circle-plus"}
     });
-    $(".actions ul li a:contains('Delete')").button( {
+    $(".actions ul li a[href*='#']").button( {
         icons: {primary: "ui-icon-cancel"}
     });
     
-    $(".actions ul li a:contains('Edit')").button( {
+    $(".actions ul li a[href*='edit']").button( {
         icons: {primary: "ui-icon-folder-open"}
     });
 
-    $(".actions ul li a:contains('List')").button( {
-        icons: {primary: "ui-icon-grip-solid-horizontal"}
-    });
-
     // related table for view.ctp and index.ctp
-    $("td.actions a:contains('Edit')").button( {
+    $("td.actions a[href*='edit']").button( {
         icons: {primary: "ui-icon-folder-open"},
         text: false
     });
-    $("td.actions a:contains('Delete')").button( {
+    $("td.actions a[href*='#']").button( {
         icons: {primary: "ui-icon-cancel"},
         text: false
     });
-    $("td.actions a:contains('View')").button( {
+    $("td.actions a[href*='view']").button( {
         icons: {primary: "ui-icon-contact"},
         text: false
     });
-    $("td.actions a:contains('Professionals')").button( {
+    $("td.actions a[href*='professionalsservices'][href*='service_id']").button( {
         icons: {primary: "ui-icon-person"},
         text: false
     });
-    $("td.actions a:contains('Skills')").button( {
+    $("td.actions a[href*='skillsprofessionals'][href*='professional_id']").button( {
         icons: {primary: "ui-icon-wrench"},
         text: false
     });
-    $("td.actions a:contains('Password')").button( {
+    $("td.actions a[href*='password']").button( {
         icons: {primary: "ui-icon-key"},
         text: false
     });    
