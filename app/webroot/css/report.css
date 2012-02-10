@@ -1,0 +1,71 @@
+/*	
+REPORTING CSS FUNCTIONS
+------------------------------------------------------
+*/
+.report_name {
+	font: normal normal bold 19pt arial; 
+	color: #333333;
+}
+
+.report_date_stamp {
+	margin-top: 15px;
+	font: normal normal 8pt arial; 
+	color: #333333;
+}
+
+.report_display {
+	margin: 2px;
+	padding: 0px;
+	width: 100%;
+}
+
+#report_display .report
+{
+	margin: 0px;
+	padding: 0px;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	border-collapse: collapse;
+	font: normal normal bold 11pt arial; 
+	color: #FFFFFF;
+}
+
+#report_display .report tr.header th
+{
+	padding: 4px 25px 4px 4px;
+	background: #333333;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-style: solid;
+	border-color: #EEEEEE;
+	font: normal normal bold 10pt arial; 
+	color: #FFFFFF;
+	text-align: left;
+}
+
+
+#report_display .report tr.body td
+{
+	padding: 4px 25px 4px 4px;
+	background: #FFFFFF;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	text-align: left;
+	font: normal normal bold 9pt arial; 
+	color: #555555;
+}
+.floatRight {float:right !important}
+
+.date {
+    width: 70px;
+}
