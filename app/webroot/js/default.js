@@ -63,6 +63,9 @@ $(function() {
         icons: {primary: "ui-icon-key"},
         text: false
     });    
+    $("#panel a[href*='report']").button( {
+        icons: {primary: "ui-icon-print"}
+    });    
      
     // buttons for form.ctp
     $(".cancelButton").button( {
