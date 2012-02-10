@@ -361,6 +361,11 @@ optgroup option {
     height: 18.5px;
 }
 
+input[type=checkbox] {
+    clear: both;
+    float: left;
+}
+
 
 /*********************
 	Icons
@@ -591,4 +596,22 @@ table tbody tr td.actions {
 
 .hmtError {
     display:none;
+}
+.report label {
+    width: 200px;
+}
+.leftPane {width:400px; display:inline-table;text-align:left; clear:both; float: left;}
+.rightPane {width:400px; display:inline-table;text-align:left; float:left;}
+
+#panel form {
+    width: 80%;
+    float: left;
+}
+#panel span {
+    margin-right: 10px;
+}
+
+#panel a {
+    height: 18px;
+    font-size: 11px;
 }
