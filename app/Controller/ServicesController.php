@@ -65,4 +65,104 @@ public function index() {
     $this->setRelated();
     parent::index();
 }
+
+public function report($conditions = array(),$order = null,$direcion = 'ASC') {
+    if (!empty($this->data['Service']['client_id'])) {
+        $conditions[] = array('client_id'=>$this->data['Service']['client_id']);
+        $this->Service->Client->recursive = -1;
+        $client = $this->Service->Client->findById($this->data['Service']['client_id'],array('client_name'));
+        $this->set('client',$client);
+    }
+        
+    
+    if (!empty($this->data['Service']['service_state_id'])) {
+        $conditions[] = array('service_state_id'=>$this->data['Service']['service_state_id']);
+        $this->Service->ServiceState->recursive = -1;
+        $service_state = $this->Service->ServiceState->findById($this->data['Service']['service_state_id'],array('service_state_desc'));
+        $this->set('service_state',$service_state);        
+    }
+        
+    
+    if (!empty($this->data['Service']['service_type_id'])) {
+        $conditions[] = array('service_type_id'=>$this->data['Service']['service_type_id']);
+        $this->Service->ServiceType->recursive = -1;
+        $service_type = $this->Service->ServiceType->findById($this->data['Service']['service_type_id'],array('service_type_desc'));
+        $this->set('service_type',$service_type);                
+    }
+        
+    
+    /**
+     * DATES
+     */
+    
+    // approval
+    if (!empty($this->data['Service']['approval_date_1']))
+        $conditions[] = array('approval_date >= '=>$this->data['Service']['approval_date_1']);
+    
+    if (!empty($this->data['Service']['approval_date_2']))
+        $conditions[] = array('approval_date <= '=>$this->data['Service']['approval_date_2']);
+
+    // expiration
+    if (!empty($this->data['Service']['expiration_date_1']))
+        $conditions[] = array('expiration_date >= '=>$this->data['Service']['expiration_date_1']);
+    
+    if (!empty($this->data['Service']['expiration_date_2']))
+        $conditions[] = array('expiration_date <= '=>$this->data['Service']['expiration_date_2']);
+
+    // payment
+    if (!empty($this->data['Service']['payment_date_1']))
+        $conditions[] = array('payment_date >= '=>$this->data['Service']['payment_date_1']);
+    
+    if (!empty($this->data['Service']['payment_date_2']))
+        $conditions[] = array('payment_date <= '=>$this->data['Service']['payment_date_2']);    
+
+    // begin
+    if (!empty($this->data['Service']['begin_date_1']))
+        $conditions[] = array('begin_date >= '=>$this->data['Service']['begin_date_1']);
+    
+    if (!empty($this->data['Service']['begin_date_2']))
+        $conditions[] = array('begin_date <= '=>$this->data['Service']['begin_date_2']);
+    
+    // end
+    if (!empty($this->data['Service']['end_date_1']))
+        $conditions[] = array('end_date >= '=>$this->data['Service']['end_date_1']);
+    
+    if (!empty($this->data['Service']['end_date_2']))
+        $conditions[] = array('end_date <= '=>$this->data['Service']['end_date_2']);
+    
+    /**
+     * VALUES
+     */
+    
+    // estimated
+    if (!empty($this->data['Service']['estimated_value_1']))
+        $conditions[] = array('estimated_value >= '=>$this->data['Service']['estimated_value_1']);
+    
+    if (!empty($this->data['Service']['estimated_value_2']))
+        $conditions[] = array('estimated_value <= '=>$this->data['Service']['estimated_value_2']);
+    
+    // real
+    if (!empty($this->data['Service']['real_value_1']))
+        $conditions[] = array('real_value >= '=>$this->data['Service']['real_value_1']);
+    
+    if (!empty($this->data['Service']['real_value_2']))
+        $conditions[] = array('real_value <= '=>$this->data['Service']['real_value_2']);
+
+    // discount
+    if (!empty($this->data['Service']['discount_value_1']))
+        $conditions[] = array('discount_value >= '=>$this->data['Service']['discount_value_1']);
+    
+    if (!empty($this->data['Service']['discount_value_2']))
+        $conditions[] = array('discount_value <= '=>$this->data['Service']['discount_value_2']);
+
+    // paid
+    if (!empty($this->data['Service']['paid_value_1']))
+        $conditions[] = array('paid_value >= '=>$this->data['Service']['paid_value_1']);
+    
+    if (!empty($this->data['Service']['paid_value_2']))
+        $conditions[] = array('paid_value <= '=>$this->data['Service']['paid_value_2']);
+    
+    parent::report($conditions,$order,$direcion);
+}
+
 }
