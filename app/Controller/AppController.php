@@ -226,6 +226,23 @@ public function find() {
     $this->render('index');
 }
 
+function report($conditions = array(),$order = null,$direction = 'ASC') {
+    if (!empty($this->data)) {
+        $this->set('conditions',$conditions); // pass conditions to the view
+        if (is_null($order))
+            $order = $this->modelClass.'.id';
+        $order = $order . ' ' . $direction;
+        $this->set('reportData', $this->{$this->modelClass}->find('all',array('order' => $order,'conditions'=>$conditions)));
+        Configure::write('debug',0);
+        $this->layout = 'report';
+        $this->render('report_display');
+    } else {
+        $this->setRelated();
+        $this->{$this->modelClass}->recursive = 0;            
+        $this->render('report_form');
+    }          
+}  
+
 }
 
 // (PHP 5 >= 5.3.0)
