@@ -64,7 +64,7 @@ public function __construct($id = false, $table = null, $ds = null) {
                     'dependent' => false,
                     'conditions' => '',
                     'fields' => '',
-                    'order' => array('Service.approval_date' => 'DESC'),
+                    'order' => '',
                     'limit' => '50',
                     'offset' => '',
                     'exclusive' => '',
@@ -80,8 +80,8 @@ public function __construct($id = false, $table = null, $ds = null) {
                         FROM `professionals_services` AS `ProfessionalsService` 
                         LEFT JOIN `services` AS `Service` ON 
                         (`ProfessionalsService`.`service_id` = `Service`.`id`) 
-                        WHERE `ProfessionalsService`.`professional_id` = {$__cakeID__$} 
-                        ORDER BY `Service`.`approval_date` DESC LIMIT 50',
+                        WHERE `ProfessionalsService`.`professional_id` IN ( {$__cakeID__$} ) 
+                        ORDER BY `Service`.`approval_date` DESC',
                     'counterQuery' => ''
             ),
             'SkillsProfessional' => array(
@@ -105,7 +105,7 @@ public function __construct($id = false, $table = null, $ds = null) {
                         FROM `skills_professionals` AS `SkillsProfessional` 
                         LEFT JOIN `skills` AS `Skill` ON 
                         ( `SkillsProfessional`.`skill_id` = `Skill`.`id` ) 
-                        WHERE `SkillsProfessional`.`professional_id` = {$__cakeID__$}
+                        WHERE `SkillsProfessional`.`professional_id` IN ( {$__cakeID__$} )  
                         ORDER BY `SkillsProfessional`.`rating` DESC',
                     'counterQuery' => ''
             )        

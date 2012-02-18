@@ -82,7 +82,7 @@ public function __construct($id = false, $table = null, $ds = null) {
                                 (`Service`.`client_id` = `Client`.`id`) 
                             LEFT JOIN `service_types` AS `ServiceType` ON 
                             (`Service`.`service_type_id` = `ServiceType`.`id`) 
-                            WHERE `Service`.`service_type_id` = {$__cakeID__$}',
+                            WHERE `Service`.`service_type_id` IN ( {$__cakeID__$} )',
                         'counterQuery' => ''
 		)
 	);

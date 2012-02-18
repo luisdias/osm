@@ -83,7 +83,7 @@ class ServiceState extends AppModel {
                                 (`Service`.`client_id` = `Client`.`id`) 
                             LEFT JOIN `service_types` AS `ServiceType` ON 
                             (`Service`.`service_type_id` = `ServiceType`.`id`) 
-                            WHERE `Service`.`service_state_id` = {$__cakeID__$}',
+                            WHERE `Service`.`service_state_id` IN ( {$__cakeID__$} )',
 			'counterQuery' => ''
 		)
 	);
