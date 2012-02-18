@@ -24,7 +24,7 @@
             OSM - Open Service Manager
             <span class="floatRight">
                 <?php echo AuthComponent::user('username'); ?> | 
-                <?php echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout'),array('class'=>'topLink')); ?>                
+                <?php echo $this->Html->link(__('Logout'), array('plugin' => null,'controller' => 'users', 'action' => 'logout'),array('class'=>'topLink')); ?>                
             </span>
         </h2>
     <div id="topmenu">
@@ -37,19 +37,19 @@
             ?>
 
             <?php $cssClass = ( $ctrl == 'clients') ? $cssCurrentClass : $cssDefaultClass; ?>
-            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Clients'), array('controller' => 'clients', 'action' => 'index')); ?></li>
+            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Clients'), array('plugin' => null,'controller' => 'clients', 'action' => 'index')); ?></li>
 
             <?php $cssClass = ( $ctrl == 'contacts') ? $cssCurrentClass : $cssDefaultClass; ?>
-            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Contacts'), array('controller' => 'contacts', 'action' => 'index')); ?></li>
+            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Contacts'), array('plugin' => null,'controller' => 'contacts', 'action' => 'index')); ?></li>
 
             <?php $cssClass = ( $ctrl == 'services' || $ctrl == 'professionalsservices') ? $cssCurrentClass : $cssDefaultClass; ?>
-            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Services'), array('controller' => 'services', 'action' => 'index')); ?></li>
+            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Services'), array('plugin' => null,'controller' => 'services', 'action' => 'index')); ?></li>
 
             <?php $cssClass = ( $ctrl == 'professionals' || $ctrl == 'skillsprofessionals') ? $cssCurrentClass : $cssDefaultClass; ?>
-            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Professionals'), array('controller' => 'professionals', 'action' => 'index')); ?></li>
+            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Professionals'), array('plugin' => null,'controller' => 'professionals', 'action' => 'index')); ?></li>
 
             <?php $cssClass = ( $ctrl == 'skills') ? $cssCurrentClass : $cssDefaultClass; ?>
-            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Skills'), array('controller' => 'skills', 'action' => 'index')); ?></li>
+            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Skills'), array('plugin' => null,'controller' => 'skills', 'action' => 'index')); ?></li>
 
             <?php 
             if ( AuthComponent::user('role') == "admin" ) {
@@ -64,7 +64,7 @@
                     $cssClass = $cssDefaultClass;
                 ?>
                 <li class="<?php echo $cssClass; ?>">
-                <?php echo $this->Html->link(__('Admin'), array('controller' => 'clientcategories', 'action' => 'index')); ?>
+                <?php echo $this->Html->link(__('Admin'), array('plugin' => null,'controller' => 'clientcategories', 'action' => 'index')); ?>
                 </li>
             <?php } ?>
           </ul>
