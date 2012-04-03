@@ -51,6 +51,9 @@
             <?php $cssClass = ( $ctrl == 'skills') ? $cssCurrentClass : $cssDefaultClass; ?>
             <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Skills'), array('plugin' => null,'controller' => 'skills', 'action' => 'index')); ?></li>
 
+            <?php $cssClass = ( $ctrl == 'report_manager') ? $cssCurrentClass : $cssDefaultClass; ?>
+            <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Reports'), array('plugin' => 'report_manager','controller' => null, 'action' => 'reports')); ?></li>
+            
             <?php 
             if ( AuthComponent::user('role') == "admin" ) {
                 if ( $ctrl == 'clientcategories' || 
