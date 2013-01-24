@@ -1,7 +1,7 @@
 # OSM - Open Service Manager  
 ## Manage freelance professionals working for your clients  
 
-**Changelog for version 0.2**  
+**Changelog for version 0.3**  
 * upgrade to CakePHP 2.2.5  
 * upgrade to ReportManager plugin version 0.4.5.1  
 
