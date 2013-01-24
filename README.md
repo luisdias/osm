@@ -4,7 +4,7 @@
 **Changelog for version 0.3**  
 * upgrade to CakePHP 2.2.5  
 * upgrade to ReportManager plugin version 0.4.5.1  
-* bugfix: controller rename to fit cake conventions
+* bugfix: controller rename to fit cake conventions  
 
 ## Installation  
 
