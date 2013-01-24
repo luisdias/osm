@@ -4,16 +4,7 @@ $(function() {
         $("#content").css('margin-right','10px');
     }
         
-
     $( "#tabs" ).tabs();
-    
-    var pathName = window.location.pathname;
-    var pathArray = pathName.split("/");
-    var firstLevel = null;
-    if ( pathName.substr(0,1) == "/" )       
-        firstLevel = "/" + pathArray[1];
-    else
-        firstLevel = "/" + pathArray[0];    
     
     $( ".datepicker" ).datepicker({
             showOn: "button",
@@ -51,11 +42,11 @@ $(function() {
         icons: {primary: "ui-icon-contact"},
         text: false
     });
-    $("td.actions a[href*='professionalsservices'][href*='service_id']").button( {
+    $("td.actions a[href*='professionals_services'][href*='service_id']").button( {
         icons: {primary: "ui-icon-person"},
         text: false
     });
-    $("td.actions a[href*='skillsprofessionals'][href*='professional_id']").button( {
+    $("td.actions a[href*='skills_professionals'][href*='professional_id']").button( {
         icons: {primary: "ui-icon-wrench"},
         text: false
     });

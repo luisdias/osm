@@ -1,12 +1,4 @@
 $(function() {
-    var pathName = window.location.pathname;
-    var pathArray = pathName.split("/");
-    var firstLevel = null;
-    if ( pathName.substr(0,1) == "/" )       
-        firstLevel = "/" + pathArray[1];
-    else
-        firstLevel = "/" + pathArray[0];
-
     updateGrid(firstLevel);
 
     $.ajax({
@@ -50,7 +42,7 @@ function makeDroppable(firstLevel) {
                 $.ajax({
                 async: false,
                 type: "POST",
-                url: firstLevel+'/professionalsservices/add',
+                url: firstLevel+'/professionals_services/add',
                 dataType: 'text',
                 data: "service_id=" + service_id  + '&' +
                     "professional_id=" + professional_id,
@@ -79,7 +71,7 @@ function updateGrid(firstLevel) {
     fkid = $("#fkid" ).val();
     $.ajax({
     type: "POST",
-    url: firstLevel+'/professionalsservices/display',
+    url: firstLevel+'/professionals_services/display',
     dataType: 'text',
     data: "fkfield=" + fkfield + '&' + 
           "fkid=" + fkid,    
