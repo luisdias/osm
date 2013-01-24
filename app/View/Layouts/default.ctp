@@ -15,6 +15,9 @@
     echo $this->Html->script(array('jquery-1.7.1.min.js','jquery-ui-1.8.17.custom.min.js','jquery.tipsy.js','default.js')); 
     echo $scripts_for_layout;
 ?>
+<script type="text/javascript">
+    firstLevel = "<?php echo Router::url('/',true); ?>";
+</script>
 </head>
 
 <body>
@@ -42,10 +45,10 @@
             <?php $cssClass = ( $ctrl == 'contacts') ? $cssCurrentClass : $cssDefaultClass; ?>
             <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Contacts'), array('plugin' => null,'controller' => 'contacts', 'action' => 'index')); ?></li>
 
-            <?php $cssClass = ( $ctrl == 'services' || $ctrl == 'professionalsservices') ? $cssCurrentClass : $cssDefaultClass; ?>
+            <?php $cssClass = ( $ctrl == 'services' || $ctrl == 'professionals_services') ? $cssCurrentClass : $cssDefaultClass; ?>
             <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Services'), array('plugin' => null,'controller' => 'services', 'action' => 'index')); ?></li>
 
-            <?php $cssClass = ( $ctrl == 'professionals' || $ctrl == 'skillsprofessionals') ? $cssCurrentClass : $cssDefaultClass; ?>
+            <?php $cssClass = ( $ctrl == 'professionals' || $ctrl == 'skills_professionals') ? $cssCurrentClass : $cssDefaultClass; ?>
             <li class="<?php echo $cssClass; ?>"><?php echo $this->Html->link(__('Professionals'), array('plugin' => null,'controller' => 'professionals', 'action' => 'index')); ?></li>
 
             <?php $cssClass = ( $ctrl == 'skills') ? $cssCurrentClass : $cssDefaultClass; ?>
@@ -56,10 +59,10 @@
             
             <?php 
             if ( AuthComponent::user('role') == "admin" ) {
-                if ( $ctrl == 'clientcategories' || 
-                     $ctrl == 'clienttypes' ||    
-                     $ctrl == 'servicestates' ||
-                     $ctrl == 'servicetypes' ||
+                if ( $ctrl == 'client_categories' || 
+                     $ctrl == 'client_types' ||    
+                     $ctrl == 'service_states' ||
+                     $ctrl == 'service_types' ||
                      $ctrl == 'users' ||
                      $ctrl == 'settings' ) 
                     $cssClass = $cssCurrentClass;
@@ -67,7 +70,7 @@
                     $cssClass = $cssDefaultClass;
                 ?>
                 <li class="<?php echo $cssClass; ?>">
-                <?php echo $this->Html->link(__('Admin'), array('plugin' => null,'controller' => 'clientcategories', 'action' => 'index')); ?>
+                <?php echo $this->Html->link(__('Admin'), array('plugin' => null,'controller' => 'client_categories', 'action' => 'index')); ?>
                 </li>
             <?php } ?>
           </ul>
@@ -77,10 +80,10 @@
     <div id="top-panel">
         <div id="panel">
                 <?php 
-                if ( $ctrl == 'clientcategories' || 
-                     $ctrl == 'clienttypes' ||    
-                     $ctrl == 'servicestates' ||
-                     $ctrl == 'servicetypes' ||
+                if ( $ctrl == 'client_categories' || 
+                     $ctrl == 'client_types' ||    
+                     $ctrl == 'service_states' ||
+                     $ctrl == 'service_types' ||
                      $ctrl == 'users' ||
                      $ctrl == 'settings' ) {
                     echo $this->element('panel');

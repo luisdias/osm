@@ -17,10 +17,10 @@
  */
 ?>
 <ul>
-<li><?php echo $this->Html->link(__('Client categories'), array('controller' => 'clientcategories', 'action' => 'index')); ?></li>
-<li><?php echo $this->Html->link(__('Client types'), array('controller' => 'clienttypes', 'action' => 'index')); ?></li>
-<li><?php echo $this->Html->link(__('Service states'), array('controller' => 'servicestates', 'action' => 'index')); ?></li>
-<li><?php echo $this->Html->link(__('Service types'), array('controller' => 'servicetypes', 'action' => 'index')); ?></li>
-<li><?php echo $this->Html->link(__('Users'), array('controller' => 'users', 'action' => 'index')); ?></li>
-<li><?php echo $this->Html->link(__('Settings'), array('controller' => 'settings', 'action' => 'index')); ?></li>                    
+<li><?php echo $this->Html->link(__('Client categories'), array('plugin' => null,'controller' => 'client_categories', 'action' => 'index')); ?></li>
+<li><?php echo $this->Html->link(__('Client types'), array('plugin' => null,'controller' => 'client_types', 'action' => 'index')); ?></li>
+<li><?php echo $this->Html->link(__('Service states'), array('plugin' => null,'controller' => 'service_states', 'action' => 'index')); ?></li>
+<li><?php echo $this->Html->link(__('Service types'), array('plugin' => null,'controller' => 'service_types', 'action' => 'index')); ?></li>
+<li><?php echo $this->Html->link(__('Users'), array('plugin' => null,'controller' => 'users', 'action' => 'index')); ?></li>
+<li><?php echo $this->Html->link(__('Settings'), array('plugin' => null,'controller' => 'settings', 'action' => 'index')); ?></li>                    
 </ul>

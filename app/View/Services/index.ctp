@@ -80,7 +80,7 @@
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $service['Service']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $service['Service']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $service['Service']['id']), null, __('Are you sure you want to delete # %s?', $service['Service']['id'])); ?>
-                        <?php echo $this->Html->link(__('Professionals'), array('controller'=>'professionalsservices','action' => 'index','fkfield'=>'service_id','fkid'=>$service['Service']['id'])); ?>                    
+                        <?php echo $this->Html->link(__('Professionals'), array('plugin' => null,'controller'=>'professionals_services','action' => 'index','fkfield'=>'service_id','fkid'=>$service['Service']['id'])); ?>                    
 		</td>
 	</tr>
 <?php endforeach; ?>

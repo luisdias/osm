@@ -39,7 +39,7 @@
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $professional['Professional']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $professional['Professional']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $professional['Professional']['id']), null, __('Are you sure you want to delete # %s?', $professional['Professional']['id'])); ?>
-                        <?php echo $this->Html->link(__('Skills'), array('controller'=>'skillsprofessionals','action' => 'index','fkfield'=>'professional_id','fkid'=>$professional['Professional']['id'])); ?>                    
+                        <?php echo $this->Html->link(__('Skills'), array('plugin' => null,'controller'=>'skills_professionals','action' => 'index','fkfield'=>'professional_id','fkid'=>$professional['Professional']['id'])); ?>                    
 		</td>
 	</tr>
 <?php endforeach; ?>
